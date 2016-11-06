@@ -10,6 +10,8 @@ namespace Models.Professor
     //Entity
     public class Professor
     {
+
+
         public PlainText Name { get; internal set; }
 
         public Professor(PlainText name)
