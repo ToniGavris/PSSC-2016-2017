@@ -11,6 +11,7 @@ namespace Models.Professor
     //Aggregate Root
     public class Subjects
     {
+        public Guid Id;
         private List<Subject.Subject> _subjects;
         public ReadOnlyCollection<Subject.Subject> AllSubjects { get { return _subjects.AsReadOnly(); } }
 

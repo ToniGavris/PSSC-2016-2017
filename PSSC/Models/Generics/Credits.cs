@@ -1,4 +1,5 @@
-﻿namespace Models.Generics
+﻿using Models.Generics.Exceptions;
+namespace Models.Generics
 {
     public class Credits
     {
@@ -14,7 +15,22 @@
 
         public Credits(int credits)
         {
+
+            if(_credits < 0 || _credits > _maxCredits)
+                throw new InvalidCreditsValue("Illegal");
             _credits = credits;
+        }
+        public override bool Equals(object obj)
+        {
+            return this._credits.Equals((obj as Credits).Count);
+        }
+        public override string ToString()
+        {
+            return "Numarul de credite este: " + _credits;
+        }
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }

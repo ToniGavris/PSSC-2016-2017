@@ -1,9 +1,11 @@
 ﻿using Models.Generics;
+using System;
 
 namespace Models.Subject
 {
     public class SubjectInformation
     {
+        public Guid Id;
         public PlainText Name { get; internal set; }
         public Credits Credits { get; internal set; }
         public Professor.Professor Professor { get; internal set; }

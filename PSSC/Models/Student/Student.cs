@@ -10,6 +10,7 @@ namespace Models.Student
     //Entity
     public class Student
     {
+        public Guid Id;
         public RegistrationNumber RegNumber { get; internal set; }
         public PlainText Name { get; internal set; }
         public Credits Credits { get; internal set; }

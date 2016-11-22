@@ -10,7 +10,7 @@ namespace Models.Professor
     //Entity
     public class Professor
     {
-
+        public Guid Id { get; set; }
 
         public PlainText Name { get; internal set; }
 

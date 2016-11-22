@@ -11,6 +11,7 @@ namespace Models.Subject
     //Entity
     public class Subject
     {
+        public Guid Id;
         public SubjectInformation SubjectInfo { get; internal set; }
 
         private Dictionary<Student.Student, SubjectSituation> _signedUpStudentsGrades;

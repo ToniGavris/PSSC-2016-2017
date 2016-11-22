@@ -11,5 +11,9 @@
             _numerator = numerator;
             _denominator = denominator;
         }
+        public override bool Equals(object obj)
+        {
+            return this.Fraction.Equals((obj as Proportion).Fraction);
+        }
     }
 }

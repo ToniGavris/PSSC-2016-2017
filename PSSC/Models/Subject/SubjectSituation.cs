@@ -9,6 +9,7 @@ namespace Models.Subject
 {
     public class SubjectSituation
     {
+        public Guid Id;
         public Attendance Attendance { get; internal set; }
         public List<Grade> ExamGrades { get; internal set; }
         public Grade ActivityGrade { get; internal set; }
