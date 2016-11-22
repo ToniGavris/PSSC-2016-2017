@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models.Generics.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,21 @@ namespace Models.Generics
 
         public Attendance(int count)
         {
+            if(_count < 0)
+                throw new InvalidAttendance("Invalid");
             _count = count;
+        }
+        public override bool Equals(object obj)
+        {
+            return this._count.Equals((obj as Attendance).Count); 
+        }
+        public override string ToString()
+        {
+            return "Numarul de prezente este: " + _count;
+        }
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }
